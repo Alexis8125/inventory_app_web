@@ -1,11 +1,11 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
-import tailwindcss from '@tailwindcss/vite';
-
-// https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()]
-  }
+  // IMPORTANTE: Cambia esto a tu dominio o repo de GitHub Pages
+  site: 'http://amstech.site/',
+  base: '/', // Si usas dominio personalizado, deja '/'
+  
+  integrations: [tailwind()],
+  output: 'static', // GitHub Pages requiere static output
 });
