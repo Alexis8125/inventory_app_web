@@ -1,11 +1,12 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
+// Configuración específica para GitHub Pages con dominio personalizado
 export default defineConfig({
-  // IMPORTANTE: Cambia esto a tu dominio o repo de GitHub Pages
-  site: 'http://amstech.site/',
-  base: '/', // Si usas dominio personalizado, deja '/'
+  // IMPORTANTE: Usa tu dominio personalizado
+  site: 'https://amstech.site',
+  base: '/', // IMPORTANTE: Deja como '/' para dominio personalizado
   
   integrations: [tailwind()],
-  output: 'static', // GitHub Pages requiere static output
+  output: 'static',
 });
